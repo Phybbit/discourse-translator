@@ -1,0 +1,2 @@
+module ::TranslatorPlugin
+end
