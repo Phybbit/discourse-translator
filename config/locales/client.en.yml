@@ -19,3 +19,8 @@ en:
   js:
     translate:
       translate: 'Translate'
+      translated_post: 'Translated Post:'
+    admin:
+      site_settings:
+        categories:
+          translator_plugin: 'Translator Plugin'

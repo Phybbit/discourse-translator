@@ -54,9 +54,12 @@
           </div>
         {{/if}}
         <div {{bind-attr class=":read-state read"}} title="{{i18n post.unread}}"><i class='fa fa-circle'></i></div>
-        <div class='post-info translate'>
-          <a href='#' {{action translate this target="view"}}>{{i18n translate.translate}}</a>
-        </div>
+      </div>
+      <div class='translate'>
+        <a href='#' {{action translate this target="view"}}>
+          <i class='fa fa-globe'></i>
+          {{i18n translate.translate}}
+        </a>
       </div>
 
       <div {{bind-attr class=":select-posts controller.multiSelect::hidden"}}>
@@ -68,6 +71,14 @@
         <div class='cooked'>
           {{{cooked}}}
         </div>
+        {{#if view.translated}}
+        <div class='translation-wrapper'>
+          <hr>{{i18n translate.translated_post}}
+          <div class='cooked translation'>
+            {{{view.translation}}}
+          </div>
+        </div>
+        {{/if}}
         {{#if cooked_hidden}}
           <a href {{action expandHidden this}}>{{i18n post.show_hidden}}</a>
         {{/if}}

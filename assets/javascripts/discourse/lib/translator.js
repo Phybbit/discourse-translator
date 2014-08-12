@@ -10,19 +10,33 @@ Discourse.Translator = {
 
   translate: function(content) {
     var translator = this;
-    return this.getToken().then(function() {
-      return Discourse.ajax('http://api.microsofttranslator.com/V2/Ajax.svc/Translate', { 
-        type: 'POST',
-        dataType: 'jsonp',
-        data: {
-          appid: "Bearer " + translator.token,
-          to: "fr",
-          text: content,
-          contentType: 'text/html'
-        }
-      }).then(function(res) {
-        return res;
-      });
+    return translator.getToken()
+    .then(function() {
+      return translator.requestTranslation(content);
+    }).then(function(translated) {
+      return translated;
+    }, function(err) {
+      console.log('failed', err);
+    });
+  },
+
+  requestTranslation: function(content) {
+    var translator = this;
+    return Discourse.ajax('http://api.microsofttranslator.com/V2/Ajax.svc/Translate', { 
+      type: 'POST',
+      dataType: 'jsonp',
+      jsonp: 'oncomplete',
+      data: {
+        appid: "Bearer " + translator.token,
+        to: "fr",
+        text: content,
+        contentType: 'text/html'
+      }
+    }).then(function(res) {
+      return res;
+    }, function(err) {
+      console.error('failed', err);
+      return err;
     });
   }
 };
