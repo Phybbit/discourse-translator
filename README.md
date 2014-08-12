@@ -6,9 +6,9 @@ Provides translations of post content from Bing
 Setup
 =====
 
-- Subscribe to (Microsoft Translator Service)[https://datamarket.azure.com/dataset/bing/microsofttranslator], free for 2 million characters per month
-- In https://datamarket.azure.com/account go to `Developers` and register an application.
-- In `Admin -> Settings -> Translator Pluing` add your `client ID` and `client secret` and enable the plugin
+- Subscribe to [Microsoft Translator Service](https://datamarket.azure.com/dataset/bing/microsofttranslator), free for 2 million characters per month
+- In [Your account](https://datamarket.azure.com/account) go to `Developers` and register an application.
+- In `Admin -> Settings -> Translator Plugin` add your `client ID` and `client secret` and enable the plugin
 
 TODO
 ====
