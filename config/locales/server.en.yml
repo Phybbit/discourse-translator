@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    translator_enabled: 'Enable the translator plugin'
+    translator_app_client_id: 'Your application client ID'
+    translator_app_client_secret: 'Your application client secret'

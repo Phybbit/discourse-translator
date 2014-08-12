@@ -1,0 +1,8 @@
+translator_plugin:
+  translator_enabled:
+    client: true
+    default: false
+  translator_app_client_id:
+    default: ''
+  translator_app_client_secret:
+    default: ''

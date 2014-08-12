@@ -16,8 +16,12 @@ after_initialize do
 
     class TranslatorController < ActionController::Base
       def token
-        client_id = 'YOUR ID'
-        client_secret = 'YOUR SECRET'
+        binding.pry
+        return render status: 403, json: {} unless SiteSetting.translator_enabled?
+
+        client_id = SiteSetting.translator_app_client_id
+        client_secret = SiteSetting.translator_app_client_secret
+
         post_body = "grant_type=client_credentials&client_id=#{URI.encode client_id}&client_secret=#{URI.encode client_secret}&scope=http://api.microsofttranslator.com"
 
         json = Excon.post('https://datamarket.accesscontrol.windows.net/v2/OAuth2-13',
@@ -44,8 +48,9 @@ register_asset 'javascripts/translator.js'
 
 register_css <<CSS
 
-.post-info.translate {
-  margin-right: 5px;
+.translate {
+  float: right;
+  font-size: 12px;
 }
 
 CSS
