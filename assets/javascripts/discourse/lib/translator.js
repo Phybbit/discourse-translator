@@ -28,7 +28,7 @@ Discourse.Translator = {
       jsonp: 'oncomplete',
       data: {
         appid: "Bearer " + translator.token,
-        to: "fr",
+        to: I18n.locale,
         text: content,
         contentType: 'text/html'
       }
