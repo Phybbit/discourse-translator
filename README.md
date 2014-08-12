@@ -3,6 +3,10 @@ discourse-translator
 
 Provides translations of post content from Bing
 
+Screenshot:
+
+![translated](http://i.imgur.com/HxMjRI4.png)
+
 Setup
 =====
 
