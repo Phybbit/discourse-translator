@@ -16,7 +16,6 @@ after_initialize do
 
     class TranslatorController < ActionController::Base
       def token
-        binding.pry
         return render status: 403, json: {} unless SiteSetting.translator_enabled?
 
         client_id = SiteSetting.translator_app_client_id
