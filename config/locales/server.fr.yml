@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    translator_enabled: 'Activer le Plugin de Traduction'
+    translator_app_client_id: "Votre ID client d'application"
+    translator_app_client_secret: "Votre secret du client d'application"
