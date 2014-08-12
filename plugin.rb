@@ -1,6 +1,6 @@
 # name: translator
 # about: adds automatic post content translation to Discourse
-# version: 0.1
+# version: 0.2
 # authors: Hugo Almeida, Phybbit
 
 load File.expand_path('../translator.rb', __FILE__)
