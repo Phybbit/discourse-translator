@@ -22,7 +22,7 @@ Discourse.Translator = {
 
   requestTranslation: function(content) {
     var translator = this;
-    return Discourse.ajax('http://api.microsofttranslator.com/V2/Ajax.svc/Translate', { 
+    return Discourse.ajax('//api.microsofttranslator.com/V2/Ajax.svc/Translate', { 
       type: 'POST',
       dataType: 'jsonp',
       jsonp: 'oncomplete',
