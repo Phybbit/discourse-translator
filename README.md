@@ -7,6 +7,14 @@ Screenshot:
 
 ![translated](http://i.imgur.com/HxMjRI4.png)
 
+Installation
+============
+
+- `rake plugin:install repo=https://github.com/Phybbit/discourse-translator`
+- In development mode, run `bundle exec rake assets:clean`
+- In production, recompile your assets: `bundle exec rake assets:precompile`
+- Restart Discourse
+
 Setup
 =====
 
