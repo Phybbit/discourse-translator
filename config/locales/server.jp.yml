@@ -1,5 +1,0 @@
-jp:
-  site_settings:
-    translator_enabled: '翻訳プラグインを有効にする'
-    translator_app_client_id: 'アプリのクライアントID'
-    translator_app_client_secret: 'アプリのクライアントシークレットキー'
